@@ -21,30 +21,30 @@ h2, h3, p{
     
   }
   .main-text p {
-    display: inline-block;          /* 텍스트 크기 기준 */
-    width: fit-content;             /* 핵심 */
-    max-width: 70%;                 /* 너무 길어지지 않게 */
-    
-    padding: 18px 24px;
-    background: #fff;
-    border-radius: 16px;
+  display: inline-block;          /* 텍스트 크기 기준 */
+  width: fit-content;             /* 핵심 */
+  max-width: 70%;                 /* 너무 길어지지 않게 */
   
-    line-height: 1.6;
-  }
-  .from-left {
-    align-self: flex-start;
-  }
-  
-  .from-right {
-    align-self: flex-end;
-  }
-  .main-text {
-    align-items: center;
-  }
-  main{
-    margin-bottom: 5vh;
-  }
+  padding: 18px 24px;
+  background: #fff;
+  border-radius: 16px;
 
+  line-height: 1.6;
+}
+.from-left {
+  align-self: flex-start;
+  box-shadow: -6px 8px 10px gray;
+}
+.from-right {
+  align-self: flex-end;
+  box-shadow: 6px 8px 10px gray;
+}
+.main-text {
+  align-items: center;
+}
+main{
+  margin-bottom: 5vh;
+}
 .from-top {
     opacity: 0;
     animation-name: fadeFromTop;
@@ -112,3 +112,4 @@ to {
 .hide-wrap > *:nth-child(7) { animation-delay: 1.4s; }
 .hide-wrap > *:nth-child(8) { animation-delay: 1.6s; }
 .hide-wrap > *:nth-child(9) { animation-delay: 1.8s; }
+
