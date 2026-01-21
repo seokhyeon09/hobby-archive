@@ -1,0 +1,23 @@
+.main-title{
+    text-align: center;
+}
+.main-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+.main-card{
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    align-content: center;
+}
+.main-card span{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.card-border a{
+    color: #000;
+}

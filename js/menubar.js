@@ -1,0 +1,3 @@
+document.querySelector("#menu-button").addEventListener("click", () => {
+    document.querySelector(".header-nav").classList.toggle("hide");
+});
