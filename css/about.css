@@ -1,125 +1,125 @@
 .sec-title{
-    font-size: 40px;
-    font-weight: 500;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 h2, h3, p{
-    margin: 8px 0;
-    padding: 8px;
+  margin: 8px 0;
+  padding: 8px;
 }
 .name{
-    margin-top: 24px;
-    display: inline-block;
+  margin-top: 24px;
+  display: inline-block;
 
-    box-shadow: 0 0 10px red;
+  box-shadow: 0 0 10px red;
 }
 .name h3{
-    font-size: 25px;
-    font-weight: 400;
+  font-size: 25px;
+  font-weight: 400;
 }
 .main-text {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 
-  }
-  .main-text > h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #e3cfa8;
-    margin-top: 12px;
-  }
-  .main-text > h2 {
-    margin-bottom: 48px;
-  }
+}
+.main-text > h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #e3cfa8;
+  margin-top: 12px;
+}
+.main-text > h2 {
+  margin-bottom: 48px;
+}
 .main-text p {
-  display: inline-block;          /* 텍스트 크기 기준 */
-  width: fit-content;             /* 핵심 */
-  max-width: 70%;                 /* 너무 길어지지 않게 */
-  
-  padding: 18px 24px;
-  background: #fff;
-  border-radius: 16px;
+display: inline-block;          /* 텍스트 크기 기준 */
+width: fit-content;             /* 핵심 */
+max-width: 70%;                 /* 너무 길어지지 않게 */
 
-  line-height: 1.6;
+padding: 18px 24px;
+background: #fff;
+border-radius: 16px;
+
+line-height: 1.6;
 }
 .from-left {
-  align-self: flex-start;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+align-self: flex-start;
+box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 .from-right {
-  align-self: flex-end;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+align-self: flex-end;
+box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 .main-text {
-  align-items: center;
+align-items: center;
 }
 main{
-  margin-bottom: 5vh;
+margin-bottom: 5vh;
 }
 
 .closing{
-  box-shadow: 0 0 10px green;
+box-shadow: 0 0 10px green;
 }
 .from-top {
-    opacity: 0;
-    animation-name: fadeFromTop;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-  }
-  
+  opacity: 0;
+  animation-name: fadeFromTop;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
 @keyframes fadeFromTop {
 from {
-    opacity: 0;
-    transform: translateY(-30px);
+  opacity: 0;
+  transform: translateY(-30px);
 }
 to {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 }
 
 .hide-wrap > * {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+/* 왼쪽 → 가운데 */
+.from-left {
+  animation-name: fadeFromLeft;
+}
+
+/* 오른쪽 → 가운데 */
+.from-right {
+  animation-name: fadeFromRight;
+}
+
+@keyframes fadeFromLeft {
+  from {
     opacity: 0;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
+    transform: translateX(-40px);
   }
-  
-  /* 왼쪽 → 가운데 */
-  .from-left {
-    animation-name: fadeFromLeft;
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-10px);
   }
-  
-  /* 오른쪽 → 가운데 */
-  .from-right {
-    animation-name: fadeFromRight;
+}
+
+@keyframes fadeFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
   }
-  
-  @keyframes fadeFromLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0) translateY(-10px);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-10px);
   }
-  
-  @keyframes fadeFromRight {
-    from {
-      opacity: 0;
-      transform: translateX(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0) translateY(-10px);
-    }
-  }
+}
 /* 순차등장 */
 .hide-wrap > *:nth-child(1) { animation-delay: 0.2s; }
 .hide-wrap > *:nth-child(2) { animation-delay: 0.4s; }
@@ -132,8 +132,15 @@ to {
 .hide-wrap > *:nth-child(9) { animation-delay: 1.8s; }
 
 @media (max-width: 768px) {
-  .main-text p {
-    align-self: center !important;
-    max-width: 100%;
-  }
+.main-text p, .main-text h2{
+  align-self: center !important;
+  max-width: 100%;
+}
+.main-wrap{
+  text-align: center;
+}
+.name{
+  margin-bottom: 24px;
+}
+
 }
