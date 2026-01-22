@@ -68,8 +68,20 @@
     }
 }
 @media (max-width:651px) {
+    /* style에 폰트관련 설정이있음 */
+    .main-title{
+        font-size: 35px;
+        display: inline-block;
+        width: 103px;
+        height: 45px;
+        text-align: center;
+        align-content: center;
+        background-color: beige;
+        border-radius: 25px 25px 0 0;
+    }
     .main-wrap{
         margin: 0 auto;
         max-width: 324px;
     }
+
 }
